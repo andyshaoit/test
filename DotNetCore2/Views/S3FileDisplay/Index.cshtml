@@ -1,0 +1,35 @@
+@model IEnumerable<DotNetCore2.Models.ColorViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+@if (Model != null)
+{
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ColorID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.color)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ColorID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.color)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+}
